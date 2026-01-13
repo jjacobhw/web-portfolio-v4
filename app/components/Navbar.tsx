@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { motion } from "framer-motion";
 
 const navItems = [
   { href: "/", label: "Home" },
@@ -57,13 +58,20 @@ export default function Navbar() {
             <Link
               key={item.href}
               href={item.href}
-              className={`px-4 py-2 text-sm rounded-lg transition-all ${
+              className={`px-4 py-2 text-sm transition-colors relative ${
                 pathname === item.href
-                  ? "text-[var(--foreground)] bg-[var(--accent-secondary)]"
-                  : "text-[var(--foreground-secondary)] hover:text-[var(--foreground)] hover:bg-[var(--accent-secondary)]"
+                  ? "text-[var(--foreground)]"
+                  : "text-[var(--foreground-secondary)] hover:text-[var(--foreground)]"
               }`}
             >
               {item.label}
+              {pathname === item.href && (
+                <motion.span
+                  layoutId="navbar-underline"
+                  className="absolute bottom-0 left-0 right-0 h-0.5 bg-[var(--accent)]"
+                  transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                />
+              )}
             </Link>
           ))}
         </div>

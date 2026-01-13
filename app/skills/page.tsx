@@ -41,7 +41,7 @@ export default function Skills() {
           transition={{ duration: 0.5 }}
         >
           <p className="text-[var(--accent)] font-medium mb-4">Skills</p>
-          <h1 className="text-4xl md:text-5xl font-bold">My toolkit</h1>
+          <h1 className="text-4xl md:text-5xl font-bold">Tech Stack</h1>
         </motion.div>
 
         <motion.div
