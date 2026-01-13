@@ -19,9 +19,9 @@ const experiences = [
       "Built React-based dashboard applications and developed RESTful APIs using Node.js and Express.",
   },
   {
-    title: "Junior Developer",
-    company: "WebAgency",
-    period: "2019 - 2020",
+    title: "Data & Automation Intern",
+    company: "Healthcare Practice IT",
+    period: "June 2024 - September 2024",
     description:
       "Developed client websites using modern web technologies and participated in agile development processes.",
   },
@@ -31,14 +31,14 @@ const education = [
   {
     degree: "Master of Science in Computer Science",
     school: "Stanford University",
-    period: "2017 - 2019",
+    period: "2027 - 2029",
     description:
       "Specialized in distributed systems and machine learning. Thesis on optimizing microservices communication patterns.",
   },
   {
     degree: "Bachelor of Science in Computer Science",
-    school: "University of California, Berkeley",
-    period: "2013 - 2017",
+    school: "University of California, Santa Cruz",
+    period: "September 2023 - June 2027",
     description:
       "Graduated with honors. Focused on software engineering and algorithms. Active member of the coding club.",
   },
@@ -111,9 +111,8 @@ export default function Experience() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
         >
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Experience & Education</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">Experience</h1>
           <p className="text-[var(--foreground-secondary)] text-lg max-w-2xl">
-            A timeline of my professional career and academic background
           </p>
         </motion.div>
 
@@ -169,8 +168,8 @@ export default function Experience() {
               {education.map((edu, index) => (
                 <TimelineItem
                   key={index}
-                  title={edu.degree}
-                  subtitle={edu.school}
+                  title={edu.school}
+                  subtitle={edu.degree}
                   period={edu.period}
                   description={edu.description}
                   index={index}

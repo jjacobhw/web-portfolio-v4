@@ -103,7 +103,7 @@ export default function Home() {
               </motion.div>
               <motion.div variants={item} className="flex flex-wrap gap-3 mt-10">
                 <a
-                  href="https://github.com/"
+                  href="https://github.com/jjacobhw"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2.5 text-[var(--foreground-secondary)] hover:text-[var(--foreground)] transition-colors"
@@ -114,7 +114,7 @@ export default function Home() {
                   </svg>
                 </a>
                 <a
-                  href="https://linkedin.com/in/"
+                  href="https://www.linkedin.com/in/jacob-wei/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2.5 text-[var(--foreground-secondary)] hover:text-[var(--foreground)] transition-colors"
@@ -125,7 +125,7 @@ export default function Home() {
                   </svg>
                 </a>
                 <a
-                  href="https://devpost.com/"
+                  href="https://devpost.com/jacobhwei"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2.5 text-[var(--foreground-secondary)] hover:text-[var(--foreground)] transition-colors"
@@ -136,7 +136,7 @@ export default function Home() {
                   </svg>
                 </a>
                 <a
-                  href="mailto:hello@example.com"
+                  href="nowei.4102004@gmail.com"
                   className="p-2.5 text-[var(--foreground-secondary)] hover:text-[var(--foreground)] transition-colors"
                   aria-label="Email"
                 >
@@ -146,7 +146,7 @@ export default function Home() {
                 </a>
 
                 <a
-                  href="https://instagram.com/"
+                  href="https://www.instagram.com/jacobhwei/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2.5 text-[var(--foreground-secondary)] hover:text-[var(--foreground)] transition-colors"
@@ -157,7 +157,7 @@ export default function Home() {
                   </svg>
                 </a>
                 <a
-                  href="https://open.spotify.com/user/"
+                  href="https://open.spotify.com/user/tfqoqe1ernnp5a6vvas32mcw1?si=506afe1b7ef542f1"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2.5 text-[var(--foreground-secondary)] hover:text-[var(--foreground)] transition-colors"
