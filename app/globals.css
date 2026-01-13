@@ -2,25 +2,33 @@
 
 :root,
 [data-theme="light"] {
-  --background: #ffffff;
-  --foreground: #000000;
-  --foreground-secondary: #555555;
-  --accent: #000000;
+  --background: #fafafa;
+  --foreground: #171717;
+  --foreground-secondary: #737373;
+  --foreground-muted: #a3a3a3;
+  --accent: #171717;
   --accent-secondary: #f5f5f5;
-  --border-color: rgba(0, 0, 0, 0.12);
-  --gradient-1: #ff6b6b;
-  --gradient-2: #feca57;
-  --gradient-3: #48dbfb;
-  --gradient-4: #ff9ff3;
+  --border-color: #e5e5e5;
+  --hover-bg: #f5f5f5;
+  --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --card-shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --gradient-1: #0070f3;
+  --gradient-2: #7928ca;
+  --gradient-3: #ff0080;
+  --gradient-4: #0070f3;
 }
 
 [data-theme="dark"] {
   --background: #000000;
-  --foreground: #ffffff;
-  --foreground-secondary: #aaaaaa;
+  --foreground: #ededed;
+  --foreground-secondary: #a1a1a1;
+  --foreground-muted: #737373;
   --accent: #ffffff;
-  --accent-secondary: #1a1a1a;
-  --border-color: rgba(255, 255, 255, 0.15);
+  --accent-secondary: #171717;
+  --border-color: #262626;
+  --hover-bg: #171717;
+  --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --card-shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
 @theme inline {

@@ -111,7 +111,6 @@ export default function Experience() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
         >
-          <p className="text-[var(--accent)] font-medium mb-4">My Journey</p>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Experience & Education</h1>
           <p className="text-[var(--foreground-secondary)] text-lg max-w-2xl">
             A timeline of my professional career and academic background
@@ -128,7 +127,7 @@ export default function Experience() {
           >
             <div className="flex items-center gap-3 mb-10">
               <div className="h-1 w-12 bg-gradient-to-r from-[var(--accent)] to-transparent rounded-full" />
-              <h2 className="text-3xl font-bold">Work Experience</h2>
+              <h2 className="text-3xl font-bold">Professional</h2>
             </div>
 
             <motion.div
