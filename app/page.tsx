@@ -23,9 +23,9 @@ export default function Home() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="min-h-screen flex flex-col justify-center px-6 md:px-16 lg:px-24 pt-20">
+      <section className="min-h-screen flex flex-col justify-center pt-20">
         <motion.div
-          className="max-w-4xl"
+          className="max-w-7xl mx-auto px-6 w-full"
           variants={container}
           initial="hidden"
           animate="show"
@@ -75,8 +75,8 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-24 px-6 md:px-16 lg:px-24">
-        <div className="max-w-6xl">
+      <section id="about" className="py-24">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <motion.div
               variants={container}

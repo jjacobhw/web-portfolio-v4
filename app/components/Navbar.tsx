@@ -9,7 +9,6 @@ const navItems = [
   { href: "/", label: "Home" },
   { href: "/experience", label: "Experience" },
   { href: "/projects", label: "Projects" },
-  { href: "/skills", label: "Skills" },
 ];
 
 export default function Navbar() {
@@ -51,14 +50,14 @@ export default function Navbar() {
           : "bg-transparent border-transparent"
       }`}
     >
-      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Nav Links */}
-        <div className="hidden md:flex items-center gap-1">
+        <div className="hidden md:flex items-center gap-4">
           {navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className={`px-4 py-2 text-sm transition-colors relative ${
+              className={`px-4 py-2 text-base transition-colors relative ${
                 pathname === item.href
                   ? "text-[var(--foreground)]"
                   : "text-[var(--foreground-secondary)] hover:text-[var(--foreground)]"
@@ -68,7 +67,7 @@ export default function Navbar() {
               {pathname === item.href && (
                 <motion.span
                   layoutId="navbar-underline"
-                  className="absolute bottom-0 left-0 right-0 h-0.5 bg-[var(--accent)]"
+                  className="absolute bottom-0 left-2 right-2 h-0.5 bg-[var(--accent)] rounded-full"
                   transition={{ type: "spring", stiffness: 380, damping: 30 }}
                 />
               )}
