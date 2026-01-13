@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Footer from "./components/Footer";
 
 const container = {
   hidden: { opacity: 0 },
@@ -22,9 +23,9 @@ export default function Home() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="min-h-screen flex flex-col items-center justify-center px-6 pt-20">
+      <section className="min-h-screen flex flex-col justify-center px-6 md:px-16 lg:px-24 pt-20">
         <motion.div
-          className="max-w-4xl mx-auto text-center"
+          className="max-w-4xl"
           variants={container}
           initial="hidden"
           animate="show"
@@ -46,14 +47,14 @@ export default function Home() {
           </motion.h1>
           <motion.p
             variants={item}
-            className="text-xl text-[var(--foreground-secondary)] max-w-2xl mx-auto mb-12"
+            className="text-xl text-[var(--foreground-secondary)] max-w-2xl mb-12"
           >
             A software engineer passionate about creating elegant solutions to
             complex problems. Currently crafting amazing products at TechCorp.
           </motion.p>
           <motion.div
             variants={item}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
+            className="flex flex-col sm:flex-row gap-4"
           >
             <a
               href="/resume.pdf"
@@ -74,8 +75,8 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-24 px-6">
-        <div className="max-w-6xl mx-auto">
+      <section id="about" className="py-24 px-6 md:px-16 lg:px-24">
+        <div className="max-w-6xl">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <motion.div
               variants={container}
@@ -105,7 +106,7 @@ export default function Home() {
                   href="https://github.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 rounded-lg border border-[var(--border-color)] hover:bg-[var(--accent-secondary)] transition-colors"
+                  className="p-2 text-[var(--foreground)] hover:opacity-70 transition-opacity"
                   aria-label="GitHub"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -116,7 +117,7 @@ export default function Home() {
                   href="https://linkedin.com/in/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 rounded-lg border border-[var(--border-color)] hover:bg-[var(--accent-secondary)] transition-colors"
+                  className="p-2 text-[var(--foreground)] hover:opacity-70 transition-opacity"
                   aria-label="LinkedIn"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -124,19 +125,10 @@ export default function Home() {
                   </svg>
                 </a>
                 <a
-                  href="mailto:hello@example.com"
-                  className="p-3 rounded-lg border border-[var(--border-color)] hover:bg-[var(--accent-secondary)] transition-colors"
-                  aria-label="Email"
-                >
-                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                </a>
-                <a
                   href="https://devpost.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 rounded-lg border border-[var(--border-color)] hover:bg-[var(--accent-secondary)] transition-colors"
+                  className="p-2 text-[var(--foreground)] hover:opacity-70 transition-opacity"
                   aria-label="Devpost"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -144,10 +136,20 @@ export default function Home() {
                   </svg>
                 </a>
                 <a
+                  href="mailto:hello@example.com"
+                  className="p-2 text-[var(--foreground)] hover:opacity-70 transition-opacity"
+                  aria-label="Email"
+                >
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </a>
+
+                <a
                   href="https://instagram.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 rounded-lg border border-[var(--border-color)] hover:bg-[var(--accent-secondary)] transition-colors"
+                  className="p-2 text-[var(--foreground)] hover:opacity-70 transition-opacity"
                   aria-label="Instagram"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -158,7 +160,7 @@ export default function Home() {
                   href="https://open.spotify.com/user/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 rounded-lg border border-[var(--border-color)] hover:bg-[var(--accent-secondary)] transition-colors"
+                  className="p-2 text-[var(--foreground)] hover:opacity-70 transition-opacity"
                   aria-label="Spotify"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -184,12 +186,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="mt-16 py-8 px-6 border-t border-[var(--border-color)]">
-        <div className="max-w-6xl mx-auto text-center text-[var(--foreground-secondary)]">
-          <p>Built with Next.js and Tailwind CSS</p>
-        </div>
-      </footer>
+      <Footer />
     </main>
   );
 }

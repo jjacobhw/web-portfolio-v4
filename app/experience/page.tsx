@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Footer from "../components/Footer";
 
 const experiences = [
   {
@@ -60,11 +61,11 @@ const item = {
 
 export default function Experience() {
   return (
-    <main className="min-h-screen pt-24 px-6">
-      <div className="max-w-6xl mx-auto">
+    <main className="min-h-screen pt-24 px-6 md:px-16 lg:px-24">
+      <div className="max-w-6xl">
         {/* Education Section */}
         <motion.div
-          className="text-center mb-16"
+          className="mb-16"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -103,7 +104,7 @@ export default function Experience() {
 
         {/* Experience Section */}
         <motion.div
-          className="text-center mb-16 mt-24"
+          className="mb-16 mt-24"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -143,12 +144,7 @@ export default function Experience() {
         </motion.div>
       </div>
 
-      {/* Footer */}
-      <footer className="mt-16 py-8 px-6 border-t border-[var(--border-color)]">
-        <div className="max-w-6xl mx-auto text-center text-[var(--foreground-secondary)]">
-          <p>Built with Next.js and Tailwind CSS</p>
-        </div>
-      </footer>
+      <Footer />
     </main>
   );
 }

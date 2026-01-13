@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Footer from "../components/Footer";
 
 const skills = [
   { category: "Languages", items: ["TypeScript", "JavaScript", "Python", "Go"] },
@@ -31,10 +32,10 @@ const skillItem = {
 
 export default function Skills() {
   return (
-    <main className="min-h-screen pt-24 px-6 flex flex-col">
-      <div className="max-w-6xl mx-auto">
+    <main className="min-h-screen pt-24 px-6 md:px-16 lg:px-24 flex flex-col">
+      <div className="max-w-6xl">
         <motion.div
-          className="text-center mb-16"
+          className="mb-16"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -76,12 +77,7 @@ export default function Skills() {
         </motion.div>
       </div>
 
-      {/* Footer */}
-      <footer className="mt-auto py-8 px-6 border-t border-[var(--border-color)]">
-        <div className="max-w-6xl mx-auto text-center text-[var(--foreground-secondary)]">
-          <p>Built with Next.js and Tailwind CSS</p>
-        </div>
-      </footer>
+      <Footer />
     </main>
   );
 }
