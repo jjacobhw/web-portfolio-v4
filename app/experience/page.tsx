@@ -12,16 +12,16 @@ const experiences = [
       "Leading development of microservices architecture serving 1M+ daily users. Mentoring junior developers and implementing CI/CD pipelines.",
   },
   {
-    title: "Software Engineer",
-    company: "StartupXYZ",
-    period: "2020 - 2022",
+    title: "ML Engineer",
+    company: "Inference.ai",
+    period: "June 2025 - Sept. 2025",
     description:
       "Built React-based dashboard applications and developed RESTful APIs using Node.js and Express.",
   },
   {
     title: "Data & Automation Intern",
     company: "Healthcare Practice IT",
-    period: "June 2024 - September 2024",
+    period: "June 2024 - Sept. 2024",
     description:
       "Developed client websites using modern web technologies and participated in agile development processes.",
   },
