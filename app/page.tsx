@@ -106,7 +106,7 @@ export default function Home() {
                   href="https://github.com/jjacobhw"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2.5 text-[var(--foreground-secondary)] hover:text-[var(--foreground)] transition-colors"
+                  className="p-2.5 text-[var(--foreground)] hover:opacity-60 transition-opacity"
                   aria-label="GitHub"
                 >
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -117,7 +117,7 @@ export default function Home() {
                   href="https://www.linkedin.com/in/jacob-wei/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2.5 text-[var(--foreground-secondary)] hover:text-[var(--foreground)] transition-colors"
+                  className="p-2.5 text-[var(--foreground)] hover:opacity-60 transition-opacity"
                   aria-label="LinkedIn"
                 >
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -128,7 +128,7 @@ export default function Home() {
                   href="https://devpost.com/jacobhwei"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2.5 text-[var(--foreground-secondary)] hover:text-[var(--foreground)] transition-colors"
+                  className="p-2.5 text-[var(--foreground)] hover:opacity-60 transition-opacity"
                   aria-label="Devpost"
                 >
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -137,7 +137,7 @@ export default function Home() {
                 </a>
                 <a
                   href="nowei.4102004@gmail.com"
-                  className="p-2.5 text-[var(--foreground-secondary)] hover:text-[var(--foreground)] transition-colors"
+                  className="p-2.5 text-[var(--foreground)] hover:opacity-60 transition-opacity"
                   aria-label="Email"
                 >
                   <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -149,7 +149,7 @@ export default function Home() {
                   href="https://www.instagram.com/jacobhwei/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2.5 text-[var(--foreground-secondary)] hover:text-[var(--foreground)] transition-colors"
+                  className="p-2.5 text-[var(--foreground)] hover:opacity-60 transition-opacity"
                   aria-label="Instagram"
                 >
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -160,7 +160,7 @@ export default function Home() {
                   href="https://open.spotify.com/user/tfqoqe1ernnp5a6vvas32mcw1?si=506afe1b7ef542f1"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2.5 text-[var(--foreground-secondary)] hover:text-[var(--foreground)] transition-colors"
+                  className="p-2.5 text-[var(--foreground)] hover:opacity-60 transition-opacity"
                   aria-label="Spotify"
                 >
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
