@@ -14,6 +14,7 @@ const navItems = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [theme, setTheme] = useState<"light" | "dark">("light");
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -51,7 +52,36 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        {/* Nav Links */}
+        {/* Mobile Menu Button */}
+        <button
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          className="md:hidden p-2 rounded-lg hover:bg-[var(--hover-bg)] transition-colors"
+          aria-label="Toggle menu"
+        >
+          <svg
+            className="w-6 h-6 text-[var(--foreground)]"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2}
+          >
+            {mobileMenuOpen ? (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            ) : (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            )}
+          </svg>
+        </button>
+
+        {/* Nav Links - Desktop */}
         <div className="hidden md:flex items-center gap-4">
           {navItems.map((item) => (
             <Link
@@ -76,6 +106,16 @@ export default function Navbar() {
         </div>
 
         <div className="flex items-center gap-3">
+          {/* Resume Button */}
+          <a
+            href="https://drive.google.com/file/d/1uXJ_iz17oABK1PK_JYPsvV4-u4xbebym/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-2 text-sm font-medium bg-[var(--foreground)] text-[var(--background)] rounded-lg hover:opacity-90 transition-all"
+          >
+            Resume
+          </a>
+
           {/* Theme Toggle */}
           <button
             onClick={toggleTheme}
@@ -114,6 +154,33 @@ export default function Navbar() {
           </button>
         </div>
       </div>
+
+      {/* Mobile Menu */}
+      {mobileMenuOpen && (
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -10 }}
+          className="md:hidden bg-[var(--background)] border-b border-[var(--border-color)]"
+        >
+          <div className="px-6 py-4 flex flex-col gap-2">
+            {navItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                onClick={() => setMobileMenuOpen(false)}
+                className={`px-4 py-3 text-base rounded-lg transition-colors ${
+                  pathname === item.href
+                    ? "text-[var(--foreground)] bg-[var(--hover-bg)]"
+                    : "text-[var(--foreground-secondary)] hover:text-[var(--foreground)] hover:bg-[var(--hover-bg)]"
+                }`}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </div>
+        </motion.div>
+      )}
     </nav>
   );
 }

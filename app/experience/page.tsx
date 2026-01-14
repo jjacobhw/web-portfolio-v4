@@ -5,42 +5,46 @@ import Footer from "../components/Footer";
 
 const experiences = [
   {
-    title: "Senior Software Engineer",
-    company: "TechCorp Inc.",
-    period: "2022 - Present",
+    title: "Undergraduate Researcher",
+    company: "AIEA Lab.",
+    period: "January 2026 - Present",
+    location: "Santa Cruz, CA",
     description:
-      "Leading development of microservices architecture serving 1M+ daily users. Mentoring junior developers and implementing CI/CD pipelines.",
+      "",
+  },
+  {
+    title: "Tutor/Reader",
+    company: "Baskin Engineering at UCSC",
+    period: "January 2026 - Present",
+    location: "Santa Cruz, CA",
+    description:
+      "",
   },
   {
     title: "ML Engineer",
     company: "Inference.ai",
     period: "June 2025 - Sept. 2025",
+    location: "Palto Alto, CA",
     description:
-      "Built React-based dashboard applications and developed RESTful APIs using Node.js and Express.",
+      "",
   },
   {
     title: "Data & Automation Intern",
     company: "Healthcare Practice IT",
     period: "June 2024 - Sept. 2024",
+    location: "Orange County, CA",
     description:
-      "Developed client websites using modern web technologies and participated in agile development processes.",
+      "",
   },
 ];
 
 const education = [
   {
-    degree: "Master of Science in Computer Science",
-    school: "Stanford University",
-    period: "2027 - 2029",
-    description:
-      "Specialized in distributed systems and machine learning. Thesis on optimizing microservices communication patterns.",
-  },
-  {
     degree: "Bachelor of Science in Computer Science",
     school: "University of California, Santa Cruz",
-    period: "September 2023 - June 2027",
+    period: "Sept. 2023 - June 2027",
     description:
-      "Graduated with honors. Focused on software engineering and algorithms. Active member of the coding club.",
+      "",
   },
 ];
 
@@ -64,12 +68,14 @@ export default function Experience() {
     title,
     subtitle,
     period,
+    location,
     description,
     index,
   }: {
     title: string;
     subtitle: string;
     period: string;
+    location?: string;
     description: string;
     index: number;
   }) => (
@@ -90,9 +96,14 @@ export default function Experience() {
             <h3 className="text-xl font-bold mb-1">{title}</h3>
             <p className="text-[var(--accent)] font-medium">{subtitle}</p>
           </div>
-          <span className="text-[var(--foreground-secondary)] font-mono text-sm whitespace-nowrap">
-            {period}
-          </span>
+          <div className="text-right">
+            <span className="text-[var(--foreground-secondary)] font-mono text-sm whitespace-nowrap">
+              {period}
+            </span>
+            {location && (
+              <p className="text-[var(--foreground-secondary)] text-sm mt-1">{location}</p>
+            )}
+          </div>
         </div>
         <p className="text-[var(--foreground-secondary)] leading-relaxed">
           {description}
@@ -141,6 +152,7 @@ export default function Experience() {
                   title={exp.title}
                   subtitle={exp.company}
                   period={exp.period}
+                  location={exp.location}
                   description={exp.description}
                   index={index}
                 />

@@ -57,14 +57,6 @@ export default function Home() {
             className="flex flex-col sm:flex-row gap-4"
           >
             <a
-              href="/resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-6 py-3 text-base font-medium bg-[var(--foreground)] text-[var(--background)] rounded-lg hover:opacity-90 transition-all shadow-sm hover:shadow-md"
-            >
-              Resume
-            </a>
-            <a
               href="#about"
               className="inline-flex items-center justify-center px-6 py-3 text-base font-medium border border-[var(--border-color)] rounded-lg hover:bg-[var(--hover-bg)] transition-all"
             >
