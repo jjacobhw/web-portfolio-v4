@@ -6,15 +6,7 @@ import Footer from "../components/Footer";
 const experiences = [
   {
     title: "Undergraduate Researcher",
-    company: "AIEA Lab.",
-    period: "January 2026 - Present",
-    location: "Santa Cruz, CA",
-    description:
-      "",
-  },
-  {
-    title: "Tutor/Reader",
-    company: "Baskin Engineering at UCSC",
+    company: "AIEA Lab",
     period: "January 2026 - Present",
     location: "Santa Cruz, CA",
     description:
@@ -24,9 +16,9 @@ const experiences = [
     title: "ML Engineer",
     company: "Inference.ai",
     period: "June 2025 - Sept. 2025",
-    location: "Palto Alto, CA",
+    location: "Palo Alto, CA",
     description:
-      "",
+      "Freelance",
   },
   {
     title: "Data & Automation Intern",
@@ -47,6 +39,14 @@ const education = [
       "",
   },
 ];
+
+const techStack = {
+  languages: ["Python", "TypeScript", "JavaScript", "C++", "C", "HTML", "LaTeX"],
+  frameworks: ["React", "Next.js", "Node.js", "TailwindCSS", "FastAPI", "Flask"],
+  ml: ["PyTorch", "TensorFlow", "Scikit-learn", "Pandas", "NumPy", "Hugging Face"],
+  tools: ["Docker", "GitHub", "Linux", "Nvidia H100/A100"],
+  
+};
 
 const container = {
   hidden: { opacity: 0 },
@@ -190,6 +190,45 @@ export default function Experience() {
             </motion.div>
           </motion.div>
         </div>
+
+        {/* Tech Stack Section */}
+        <motion.div
+          className="mt-20"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3, delay: 0.2 }}
+        >
+          <div className="flex items-center gap-3 mb-10">
+            <div className="h-1 w-12 bg-gradient-to-r from-[var(--accent)] to-transparent rounded-full" />
+            <h2 className="text-3xl font-bold">Tech Stack</h2>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {Object.entries(techStack).map(([category, skills], idx) => (
+              <motion.div
+                key={category}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, delay: 0.3 + idx * 0.1 }}
+                className="bg-[var(--background)] rounded-2xl p-6 border border-[var(--border-color)] hover:border-[var(--accent)] transition-all"
+              >
+                <h3 className="text-lg font-semibold mb-4 capitalize text-[var(--accent)]">
+                  {category === "ml" ? "AI/ML" : category}
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {skills.map((skill) => (
+                    <span
+                      key={skill}
+                      className="px-3 py-1.5 text-sm bg-[var(--hover-bg)] rounded-lg text-[var(--foreground-secondary)]"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
       </div>
 
       <Footer />

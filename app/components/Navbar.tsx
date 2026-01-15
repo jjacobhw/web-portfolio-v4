@@ -52,37 +52,50 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        {/* Mobile Menu Button */}
-        <button
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="md:hidden p-2 rounded-lg hover:bg-[var(--hover-bg)] transition-colors"
-          aria-label="Toggle menu"
-        >
-          <svg
-            className="w-6 h-6 text-[var(--foreground)]"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={2}
+        {/* Left side - Resume Button (Desktop) & Mobile Menu Button */}
+        <div className="flex items-center">
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="md:hidden p-2 rounded-lg hover:bg-[var(--hover-bg)] transition-colors"
+            aria-label="Toggle menu"
           >
-            {mobileMenuOpen ? (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M6 18L18 6M6 6l12 12"
-              />
-            ) : (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            )}
-          </svg>
-        </button>
+            <svg
+              className="w-6 h-6 text-[var(--foreground)]"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              {mobileMenuOpen ? (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              ) : (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              )}
+            </svg>
+          </button>
 
-        {/* Nav Links - Desktop */}
-        <div className="hidden md:flex items-center gap-4">
+          {/* Resume Button - Desktop */}
+          <a
+            href="https://drive.google.com/file/d/1uXJ_iz17oABK1PK_JYPsvV4-u4xbebym/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden md:block px-4 py-2 text-sm font-medium bg-[var(--foreground)] text-[var(--background)] rounded-lg hover:opacity-90 transition-all"
+          >
+            Resume
+          </a>
+        </div>
+
+        {/* Nav Links - Desktop (Centered) */}
+        <div className="hidden md:flex items-center gap-4 absolute left-1/2 -translate-x-1/2">
           {navItems.map((item) => (
             <Link
               key={item.href}
@@ -106,16 +119,6 @@ export default function Navbar() {
         </div>
 
         <div className="flex items-center gap-3">
-          {/* Resume Button */}
-          <a
-            href="https://drive.google.com/file/d/1uXJ_iz17oABK1PK_JYPsvV4-u4xbebym/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-4 py-2 text-sm font-medium bg-[var(--foreground)] text-[var(--background)] rounded-lg hover:opacity-90 transition-all"
-          >
-            Resume
-          </a>
-
           {/* Theme Toggle */}
           <button
             onClick={toggleTheme}
